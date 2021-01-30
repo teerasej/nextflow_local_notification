@@ -45,27 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               child: RaisedButton(
                 onPressed: () {},
-                child: Text('ฝาก noti'),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text('ข้อความ:'),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              controller: _controller,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Text('ฝาก noti ด้วยข้อความ'),
+                child: Text('เด้ง noti'),
               ),
             ),
           ],
