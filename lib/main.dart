@@ -44,6 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController _controller = TextEditingController();
 
   Future<void> _showNotification() async {
+    const AndroidNotificationDetails androidPlatformChannelSpecifics =
+        AndroidNotificationDetails(
+            'nextflow_noti_001', 'แจ้งเตือนทั่วไป', 'ก็แจ้งเตือนทั่วไปหน่ะแหละ',
+            importance: Importance.max,
+            priority: Priority.high,
+            ticker: 'ticker');
+    const NotificationDetails platformChannelSpecifics =
+        NotificationDetails(android: androidPlatformChannelSpecifics);
   }
   @override
   Widget build(BuildContext context) {
