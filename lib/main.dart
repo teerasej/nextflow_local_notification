@@ -28,12 +28,49 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: double.infinity,
+              child: RaisedButton(
+                onPressed: () {},
+                child: Text('ฝาก noti'),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text('ข้อความ:'),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: _controller,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: RaisedButton(
+                onPressed: () {},
+                child: Text('ฝาก noti ด้วยข้อความ'),
+              ),
+            ),
+          ],
         ),
-        body: Container());
+      ),
+    );
   }
 }
