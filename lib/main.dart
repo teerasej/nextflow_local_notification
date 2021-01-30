@@ -61,7 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
-        0, 'สวัสดี', 'วันนี้มีอะไรใหม่?', platformChannelSpecifics);
+        0, 'สวัสดี', 'วันนี้มีอะไรใหม่?', platformChannelSpecifics,
+        payload: '1234');
   }
 
   @override
