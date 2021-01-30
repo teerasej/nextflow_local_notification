@@ -52,6 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ticker: 'ticker');
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.show(
+        0, 
+        'สวัสดี', 
+        'วันนี้มีอะไรใหม่?', 
+        platformChannelSpecifics
+      );
   }
   @override
   Widget build(BuildContext context) {
