@@ -3,6 +3,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
+String selectedNotificationPayload;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -13,7 +14,14 @@ Future<void> main() async {
     android: initializationSettingsAndroid,
   );
 
-  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+      onSelectNotification: (String payload) {
+    if (payload != null) {
+      print('notification payload: $payload');
+    }
+    selectedNotificationPayload = payload;
+  });
+
   runApp(MyApp());
 }
 
