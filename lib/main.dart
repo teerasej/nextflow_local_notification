@@ -43,6 +43,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController _controller = TextEditingController();
 
+  Future<void> _showNotification() async {
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: double.infinity,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _showNotification();
+                },
                 child: Text('ฝาก noti'),
               ),
             ),
