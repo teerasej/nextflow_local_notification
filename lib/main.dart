@@ -11,9 +11,9 @@ Future<void> main() async {
 
   const IOSInitializationSettings initializationSettingsIOS =
       IOSInitializationSettings(
-    requestAlertPermission: false,
-    requestBadgePermission: false,
-    requestSoundPermission: false,
+    requestAlertPermission: true,
+    requestBadgePermission: true,
+    requestSoundPermission: true,
   );
 
   final InitializationSettings initializationSettings = InitializationSettings(
