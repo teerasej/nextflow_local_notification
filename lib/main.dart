@@ -61,8 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
             importance: Importance.max,
             priority: Priority.high,
             ticker: 'ticker');
-    const NotificationDetails platformChannelSpecifics =
-        NotificationDetails(android: androidPlatformChannelSpecifics);
+
+    const IOSNotificationDetails iosNotificationDetails =
+        IOSNotificationDetails(
+      badgeNumber: 1,
+      subtitle: "รายละเอียดรอง",
+    );
+
+    const NotificationDetails platformChannelSpecifics = NotificationDetails(
+      android: androidPlatformChannelSpecifics,
+      iOS: iosNotificationDetails,
+    );
     await flutterLocalNotificationsPlugin.show(
         0, 'สวัสดี', 'วันนี้มีอะไรใหม่?', platformChannelSpecifics);
   }
